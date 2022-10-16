@@ -1,26 +1,37 @@
 // import PropTypes from 'prop-types';
-// import { Formik } from 'formik';
+import { Formik } from 'formik';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { Header, SearchForm, Button, Input } from './Searchbar.styled';
 
 function Searchbar({ onSubmit }) {
-  return (
-    <Header>
-      <SearchForm>
-        <Button type="submit">
-          <BiSearchAlt2 size={24} />
-          {/* <Span>Search</Span> */}
-        </Button>
+  const handleSubmit = async (values, actions) => {
+    await onSubmit(values);
 
-        <Input
-          class="input"
-          type="text"
-          autocomplete="off"
-          autofocus
-          placeholder="Search images and photos"
-        />
-      </SearchForm>
-    </Header>
+    actions.setSubmitting(false);
+    // actions.resetForm();
+  };
+
+  return (
+    <Formik initialValues={{ searchQuery: '' }} onSubmit={handleSubmit}>
+      {props => (
+        <Header>
+          <SearchForm>
+            <Button type="submit" disabled={props.isSubmitting}>
+              <BiSearchAlt2 size={24} />
+              {/* <Span>Search</Span> */}
+            </Button>
+
+            <Input
+              class="input"
+              type="text"
+              autocomplete="off"
+              autofocus
+              placeholder="Search images and photos"
+            />
+          </SearchForm>
+        </Header>
+      )}
+    </Formik>
   );
 }
 
