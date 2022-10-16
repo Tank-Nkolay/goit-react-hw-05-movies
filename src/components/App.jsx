@@ -1,6 +1,7 @@
 import React from 'react';
 // import OnlyScroll from 'only-scrollbar';
-import toast, { Toaster } from 'react-hot-toast';
+// import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 // глобальные стили
 import GlobalStyles from './GlobalStyles';
 // импорт функции разметки
@@ -24,21 +25,21 @@ export class App extends React.Component {
     isLoading: false,
   };
 
-  // componentDidUpdate(_, prevState) {
-  //   const { page, query, error } = this.state;
-  //   const { page: prevPage, query: prevQuery, error: prevError } = prevState;
+  componentDidUpdate(_, prevState) {
+    const { page, query, error } = this.state;
+    const { page: prevPage, query: prevQuery, error: prevError } = prevState;
 
-  //   if (query === '') {
-  //     toast.error('Write something!');
-  //     return;
-  //   } else if (prevPage !== page || prevQuery !== query) {
-  //     this.fetchImg(query, page);
+    if (query === '') {
+      toast.error('Write something!');
+      return;
+    } else if (prevPage !== page || prevQuery !== query) {
+      this.fetchImg(query, page);
 
-  //     if (prevError !== error) {
-  //       toast.error(error);
-  //     }
-  //   }
-  // }
+      if (prevError !== error) {
+        toast.error(error);
+      }
+    }
+  }
 
   handlerFormSubmit = values => {
     const { query } = this.state;
@@ -85,7 +86,8 @@ export class App extends React.Component {
   // };
 
   render() {
-    const { items, isLoading } = this.state;
+    // const { items, isLoading } = this.state;
+    const { items } = this.state;
     return (
       <Section>
         <GlobalStyles />
