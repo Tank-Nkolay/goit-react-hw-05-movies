@@ -6,6 +6,8 @@ import GlobalStyles from './GlobalStyles';
 // импорт функции разметки
 import Section from './Section/Section';
 import { Markup } from './App.styled';
+// передача компонентов
+import Searchbar from './Searchbar';
 
 export class App extends React.Component {
   state = {};
@@ -14,7 +16,9 @@ export class App extends React.Component {
     return (
       <Section>
         <GlobalStyles />
-        <Markup></Markup>
+        <Markup>
+          <Searchbar />
+        </Markup>
       </Section>
     );
   }

@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 
 export const Markup = styled.div`
-  padding: ${props => props.theme.space[5]};
-  background-color: ${p => p.theme.colors.white};
+  /* ==================== */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  padding-bottom: 24px;
 `;
