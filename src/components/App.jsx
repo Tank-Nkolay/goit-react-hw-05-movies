@@ -1,13 +1,13 @@
 import React from 'react';
 // import OnlyScroll from 'only-scrollbar';
-// import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 // глобальные стили
 import GlobalStyles from './GlobalStyles';
 // импорт функции разметки
 import Section from './Section/Section';
 import { Markup } from './App.styled';
 // передача компонентов и разметки
-// import getImg from '../pixabayApi';
+import getImg from './api';
 import Searchbar from './Searchbar';
 import ImageGallery from './ImageGallery';
 
@@ -53,29 +53,29 @@ export class App extends React.Component {
     }
   };
 
-  // fetchImg = async (query, page) => {
-  //   try {
-  //     this.setState({ isLoading: true });
+  fetchImg = async (query, page) => {
+    try {
+      this.setState({ isLoading: true });
 
-  //     const response = await getImg(query, page);
-  //     const images = response.hits;
+      const response = await getImg(query, page);
+      const images = response.hits;
 
-  //     if (images.length === 0) {
-  //       toast.error(
-  //         'Sorry, there are no images matching your query. Please try again.'
-  //       );
-  //       return;
-  //     }
+      if (images.length === 0) {
+        toast.error(
+          'Sorry, there are no images matching your query. Please try again.'
+        );
+        return;
+      }
 
-  //     this.setState(({ items }) => ({
-  //       items: [...items, ...images],
-  //     }));
-  //   } catch {
-  //     this.setState({ error: 'Can`t load images!' });
-  //   } finally {
-  //     this.setState({ isLoading: false });
-  //   }
-  // };
+      this.setState(({ items }) => ({
+        items: [...items, ...images],
+      }));
+    } catch {
+      this.setState({ error: 'Can`t load images!' });
+    } finally {
+      this.setState({ isLoading: false });
+    }
+  };
 
   // loadMore = () => {
   //   this.setState(prevState => ({
