@@ -1,14 +1,18 @@
-import { Header, SearchForm } from './Searchbar.styled';
+// import PropTypes from 'prop-types';
+// import { Formik } from 'formik';
+import { BiSearchAlt2 } from 'react-icons/bi';
+import { Header, SearchForm, Button, Input } from './Searchbar.styled';
 
-const Searchbar = ({ onSubmit }) => {
+function Searchbar({ onSubmit }) {
   return (
     <Header>
       <SearchForm>
-        <button type="submit" class="button">
-          <span class="button-label">Search</span>
-        </button>
+        <Button type="submit">
+          <BiSearchAlt2 size={24} />
+          {/* <Span>Search</Span> */}
+        </Button>
 
-        <input
+        <Input
           class="input"
           type="text"
           autocomplete="off"
@@ -18,6 +22,10 @@ const Searchbar = ({ onSubmit }) => {
       </SearchForm>
     </Header>
   );
-};
+}
 
 export default Searchbar;
+
+// SearchBar.propTypes = {
+//     onSubmit: PropTypes.func.isRequired,
+//   };
