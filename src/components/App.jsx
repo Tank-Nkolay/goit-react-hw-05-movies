@@ -9,6 +9,7 @@ import { Markup } from './App.styled';
 // передача компонентов и разметки
 // import getImg from '../pixabayApi';
 import Searchbar from './Searchbar';
+import ImageGallery from './ImageGallery';
 
 // new OnlyScroll(window, {
 //   damping: 0.5,
@@ -84,11 +85,14 @@ export class App extends React.Component {
   // };
 
   render() {
+    const { items, isLoading } = this.state;
     return (
       <Section>
         <GlobalStyles />
         <Markup>
           <Searchbar onSubmit={this.handlerFormSubmit} />
+          {/* {isLoading && <Loader />} */}
+          <ImageGallery items={items} />
         </Markup>
       </Section>
     );
