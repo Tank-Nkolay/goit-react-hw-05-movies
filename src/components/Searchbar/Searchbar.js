@@ -22,10 +22,9 @@ function Searchbar({ onSubmit }) {
             </Button>
 
             <Input
-              class="input"
               type="text"
               autocomplete="off"
-              autofocus
+              autoFocus
               placeholder="Search images and photos"
             />
           </SearchForm>

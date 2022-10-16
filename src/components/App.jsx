@@ -7,6 +7,7 @@ import GlobalStyles from './GlobalStyles';
 import Section from './Section/Section';
 import { Markup } from './App.styled';
 // передача компонентов и разметки
+// import getImg from '../pixabayApi';
 import Searchbar from './Searchbar';
 
 // new OnlyScroll(window, {
