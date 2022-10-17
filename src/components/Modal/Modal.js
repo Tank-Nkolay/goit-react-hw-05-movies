@@ -5,7 +5,7 @@ import { ModalOverlay, ModalWindow, Img } from './Modal.styled';
 
 const modalRoot = document.querySelector('#modal-root');
 
-export default class Modal extends React.Component {
+class Modal extends React.Component {
   componentDidMount() {
     window.addEventListener('keydown', this.handleKeyDown);
   }
@@ -14,7 +14,7 @@ export default class Modal extends React.Component {
     window.removeEventListener('keydown', this.handleKeyDown);
   }
 
-  handleEsc = event => {
+  handleKeyDown = event => {
     if (event.code === 'Escape') {
       this.props.toggleModal();
     }
@@ -30,7 +30,7 @@ export default class Modal extends React.Component {
     const { image } = this.props;
     return createPortal(
       <ModalOverlay onClick={this.handleClikOverlay}>
-        <ModalWindow onClick={this.handleEsc}>
+        <ModalWindow>
           <Img src={image.largeImageURL} alt={image.tags} />
         </ModalWindow>
       </ModalOverlay>,
@@ -38,6 +38,8 @@ export default class Modal extends React.Component {
     );
   }
 }
+
+export default Modal;
 
 Modal.propTypes = {
   image: PropTypes.shape({
