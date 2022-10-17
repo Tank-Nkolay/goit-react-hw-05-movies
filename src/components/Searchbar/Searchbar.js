@@ -14,10 +14,10 @@ function Searchbar({ onSubmit }) {
 
   return (
     <Formik initialValues={{ searchQuery: '' }} onSubmit={handleSubmit}>
-      {({ isSubmitting }) => (
+      {props => (
         <Header>
           <Form className={css.form}>
-            <Button type="submit" disabled={isSubmitting}>
+            <Button type="submit" disabled={props.isSubmitting}>
               <BiSearchAlt2 size={24} />
             </Button>
             <Field

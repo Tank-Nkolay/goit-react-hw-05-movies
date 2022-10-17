@@ -10,6 +10,8 @@ import { Markup } from './App.styled';
 import getImg from './api';
 import Searchbar from './Searchbar';
 import ImageGallery from './ImageGallery';
+import LoadMoreBtn from './Button';
+// import Loader from 'components/Loader/Loader';
 
 // new OnlyScroll(window, {
 //   damping: 0.5,
@@ -77,16 +79,15 @@ export class App extends React.Component {
     }
   };
 
-  // loadMore = () => {
-  //   this.setState(prevState => ({
-  //     page: prevState.page + 1,
-  //     isLoading: true,
-  //   }));
-  // };
+  loadMore = () => {
+    this.setState(prevState => ({
+      page: prevState.page + 1,
+      isLoading: true,
+    }));
+  };
 
   render() {
-    // const { items, isLoading } = this.state;
-    const { items } = this.state;
+    const { items, isLoading } = this.state;
     return (
       <Section>
         <GlobalStyles />
@@ -94,6 +95,8 @@ export class App extends React.Component {
           <Searchbar onSubmit={this.handlerFormSubmit} />
           {/* {isLoading && <Loader />} */}
           <ImageGallery items={items} />
+          {items.length > 0 && <LoadMoreBtn onClick={this.loadMore} />}
+          {/* {isLoading && <Loader />} */}
         </Markup>
       </Section>
     );
