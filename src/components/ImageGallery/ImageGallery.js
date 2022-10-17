@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Ul } from './ImageGallery.styled';
 import ImageGlleryItem from '../ImageGalleryItem';
 
@@ -12,10 +12,10 @@ function ImageGallery({ items }) {
   );
 }
 
-// ImageGallery.propTypes = {
-//   items: PropTypes.arrayOf(
-//     PropTypes.shape({ id: PropTypes.number.isRequired })
-//   ),
-// };
+ImageGallery.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({ id: PropTypes.number.isRequired })
+  ),
+};
 
 export default ImageGallery;

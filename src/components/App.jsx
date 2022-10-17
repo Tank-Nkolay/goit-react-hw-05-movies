@@ -1,7 +1,5 @@
 import React from 'react';
-// import OnlyScroll from 'only-scrollbar';
-// import toast, { Toaster } from 'react-hot-toast';
-import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 // глобальные стили
 import GlobalStyles from './GlobalStyles';
 // импорт функции разметки
@@ -12,10 +10,6 @@ import Searchbar from './Searchbar';
 import ImageGallery from './ImageGallery';
 import LoadMoreBtn from './Button';
 import Loader from 'components/Loader';
-
-// new OnlyScroll(window, {
-//   damping: 0.5,
-// });
 
 export class App extends React.Component {
   state = {
@@ -31,7 +25,7 @@ export class App extends React.Component {
     const { page: prevPage, query: prevQuery, error: prevError } = prevState;
 
     if (query === '') {
-      toast.error('Write something!');
+      toast.error('Please, write something!');
       return;
     } else if (prevPage !== page || prevQuery !== query) {
       this.fetchImg(query, page);
@@ -63,9 +57,7 @@ export class App extends React.Component {
       const images = response.hits;
 
       if (images.length === 0) {
-        toast.error(
-          'Sorry, there are no images matching your query. Please try again.'
-        );
+        toast.error('Sorry, no images available. Try again!');
         return;
       }
 
@@ -73,7 +65,7 @@ export class App extends React.Component {
         items: [...items, ...images],
       }));
     } catch {
-      this.setState({ error: 'Can`t load images!' });
+      this.setState({ error: 'Something went wrong!' });
     } finally {
       this.setState({ isLoading: false });
     }
@@ -96,6 +88,7 @@ export class App extends React.Component {
           {isLoading && <Loader />}
           <ImageGallery items={items} />
           {items.length > 0 && <LoadMoreBtn onClick={this.loadMore} />}
+          <Toaster />
         </Markup>
       </Section>
     );

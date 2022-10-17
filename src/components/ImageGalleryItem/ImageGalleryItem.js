@@ -1,8 +1,8 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import Modal from '../Modal';
 
 import { Li, Img } from './ImageGalleryItem.styled';
-// import Modal from 'components/Modal/Modal';
 
 class ImageGlleryItem extends React.Component {
   state = { showModal: false };
@@ -14,7 +14,7 @@ class ImageGlleryItem extends React.Component {
   };
 
   render() {
-    // const { showModal } = this.state;
+    const { showModal } = this.state;
     const { item } = this.props;
     return (
       <>
@@ -24,7 +24,7 @@ class ImageGlleryItem extends React.Component {
             alt={item.tags}
             onClick={this.toggleModal}
           />
-          {/* {showModal && <Modal image={item} toggleModal={this.toggleModal} />} */}
+          {showModal && <Modal image={item} toggleModal={this.toggleModal} />}
         </Li>
       </>
     );
@@ -33,9 +33,9 @@ class ImageGlleryItem extends React.Component {
 
 export default ImageGlleryItem;
 
-// ImageGlleryItem.propTypes = {
-//   item: PropTypes.shape({
-//     webformatURL: PropTypes.string.isRequired,
-//     tags: PropTypes.string.isRequired,
-//   }),
-// };
+ImageGlleryItem.propTypes = {
+  item: PropTypes.shape({
+    webformatURL: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
+  }),
+};
