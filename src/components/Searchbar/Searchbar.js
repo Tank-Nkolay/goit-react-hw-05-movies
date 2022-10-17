@@ -40,36 +40,3 @@ export default Searchbar;
 Searchbar.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
-
-// ==================================================================
-// ==================================================================
-// function Searchbar({ onSubmit }) {
-//   const handleSubmit = async (values, actions) => {
-//     await onSubmit(values);
-
-//     actions.setSubmitting(false);
-//     // actions.resetForm();
-//   };
-
-//   return (
-//     <Formik initialValues={{ searchQuery: '' }} onSubmit={handleSubmit}>
-//       {props => (
-//         <Header>
-//           <SearchForm>
-//             <Button type="submit" disabled={props.isSubmitting}>
-//               <BiSearchAlt2 size={24} />
-//               {/* <Span>Search</Span> */}
-//             </Button>
-
-//             <Input
-//               type="text"
-//               autocomplete="off"
-//               autoFocus
-//               placeholder="Search images and photos"
-//             />
-//           </SearchForm>
-//         </Header>
-//       )}
-//     </Formik>
-//   );
-// }
