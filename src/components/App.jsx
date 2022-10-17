@@ -11,7 +11,7 @@ import getImg from './api';
 import Searchbar from './Searchbar';
 import ImageGallery from './ImageGallery';
 import LoadMoreBtn from './Button';
-// import Loader from 'components/Loader/Loader';
+import Loader from 'components/Loader';
 
 // new OnlyScroll(window, {
 //   damping: 0.5,
@@ -93,10 +93,9 @@ export class App extends React.Component {
         <GlobalStyles />
         <Markup>
           <Searchbar onSubmit={this.handlerFormSubmit} />
-          {/* {isLoading && <Loader />} */}
+          {isLoading && <Loader />}
           <ImageGallery items={items} />
           {items.length > 0 && <LoadMoreBtn onClick={this.loadMore} />}
-          {/* {isLoading && <Loader />} */}
         </Markup>
       </Section>
     );
