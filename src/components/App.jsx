@@ -7,7 +7,6 @@ import GlobalStyles from './GlobalStyles';
 // импорт функции разметки
 import Section from './Section/Section';
 import { Markup } from './App.styled';
-// передача компонентов и разметки
 import getImg from './api';
 import Searchbar from './Searchbar';
 import ImageGallery from './ImageGallery';

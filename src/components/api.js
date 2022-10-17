@@ -10,5 +10,7 @@ export default async function getImg(query, page) {
   const response = await axios.get(
     `?q=${query}&page=${page}&${myKey}&${onParams}&per_page=12`
   );
+  console.log(query);
+  console.log(page);
   return response.data;
 }
