@@ -1,9 +1,8 @@
 // import PropTypes from 'prop-types';
 import { Formik, Form, Field } from 'formik';
 import { BiSearchAlt2 } from 'react-icons/bi';
-// import { Header } from './Searchbar.styled';
-// import { Header, SearchForm, Button, Input } from './Searchbar.styled';
 import { Header, Button } from './Searchbar.styled';
+import css from './Searchbar.module.css';
 
 function Searchbar({ onSubmit }) {
   const handleSubmit = async (values, actions) => {
@@ -17,11 +16,12 @@ function Searchbar({ onSubmit }) {
     <Formik initialValues={{ searchQuery: '' }} onSubmit={handleSubmit}>
       {({ isSubmitting }) => (
         <Header>
-          <Form>
+          <Form className={css.form}>
             <Button type="submit" disabled={isSubmitting}>
               <BiSearchAlt2 size={24} />
             </Button>
             <Field
+              className={css.input}
               name="searchQuery"
               type="text"
               autoComplete="off"
