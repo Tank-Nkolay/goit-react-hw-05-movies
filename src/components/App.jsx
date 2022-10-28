@@ -30,14 +30,12 @@ export default function App() {
         const images = response.hits;
 
         if (images.length === 0) {
-          toast.error(
-            'Sorry, there are no images matching your query. Please try again.'
-          );
+          toast.error('Sorry, no images available. Try again!');
           return;
         }
         setItems(items => [...items, ...images]);
       } catch {
-        setError('Can`t load images!');
+        setError('Something went wrong!');
       } finally {
         setIsLoading(false);
       }
