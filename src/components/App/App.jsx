@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 // глобальные стили
-import GlobalStyles from './GlobalStyles';
+import GlobalStyles from '../GlobalStyles';
 // импорт функции разметки
-import Section from './Section/Section';
+import Section from '../Section/Section';
 import { Markup } from './App.styled';
-import getImg from './api';
-import Searchbar from './Searchbar';
-import ImageGallery from './ImageGallery';
-import LoadMoreBtn from './Button';
-import Loader from 'components/Loader';
+import getImg from '../api';
+import Searchbar from '../Searchbar';
+import ImageGallery from '../ImageGallery';
+import LoadMoreBtn from '../Button';
+import Loader from '../Loader';
 
 export default function App() {
   const [items, setItems] = useState([]);
