@@ -2,18 +2,24 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { routes } from 'routes';
 import Loader from 'components/Loader';
-import { Container, Header, Nav, NavItem, Footer } from './SharedLayout.styled';
+import {
+  Container,
+  Header,
+  Navigation,
+  NavigationItem,
+  Footer,
+} from './SharedLayout.styled';
 
 export default function SharedLayout() {
   return (
     <Container>
       <Header>
-        <Nav>
-          <NavItem to={routes.HOME} end>
+        <Navigation>
+          <NavigationItem to={routes.HOME} end>
             HOME
-          </NavItem>
-          <NavItem to={routes.MOVIES}>MOVIES</NavItem>
-        </Nav>
+          </NavigationItem>
+          <NavigationItem to={routes.MOVIES}>MOVIES</NavigationItem>
+        </Navigation>
       </Header>
       <Suspense fallback={<Loader />}>
         <Outlet />

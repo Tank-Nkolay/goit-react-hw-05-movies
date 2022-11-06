@@ -9,13 +9,13 @@ export const Header = styled.div`
   padding-bottom: 24px;
 `;
 
-export const Nav = styled.div`
+export const Navigation = styled.div`
   display: flex;
   justify-content: center;
   gap: 50px;
 `;
 
-export const NavItem = styled(NavLink)`
+export const NavigationItem = styled(NavLink)`
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
