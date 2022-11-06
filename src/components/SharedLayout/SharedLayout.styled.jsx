@@ -17,21 +17,16 @@ export const Nav = styled.div`
 
 export const NavItem = styled(NavLink)`
   font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.17;
-  text-transform: uppercase;
-
-  color: #ffffff;
-  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
 
   &.active {
-    color: #ff001b;
+    color: #0e0f69;
   }
-
-  :hover:not(.active),
-  :focus-visible:not(.active) {
-    color: #ff001b;
+  :hover,
+  :focus {
+    color: #0e0f69;
   }
 `;
 
@@ -44,4 +39,7 @@ export const Footer = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
 `;

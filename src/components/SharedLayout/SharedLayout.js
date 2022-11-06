@@ -7,12 +7,12 @@ import { Container, Header, Nav, NavItem, Footer } from './SharedLayout.styled';
 export default function SharedLayout() {
   return (
     <Container>
-      <Header as="header">
-        <Nav as="nav">
+      <Header>
+        <Nav>
           <NavItem to={routes.HOME} end>
-            Home
+            HOME
           </NavItem>
-          <NavItem to={routes.MOVIES}>Movies</NavItem>
+          <NavItem to={routes.MOVIES}>MOVIES</NavItem>
         </Nav>
       </Header>
       <Suspense fallback={<Loader />}>
