@@ -1,11 +1,10 @@
-import BackLink from 'components/BackLink/BackLink';
 import { Suspense } from 'react';
-
-import { useMovieDetails } from 'hooks';
-import PropTypes from 'prop-types';
-import { Toaster } from 'react-hot-toast';
 import { Outlet, useLocation } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import PropTypes from 'prop-types';
+import { useMovieDetails } from 'hooks';
 import Loader from '../../components/Loader/Loader';
+import BackLink from 'components/BackLink/BackLink';
 import images from '../../images/images.jpg';
 import {
   AddTitle,
