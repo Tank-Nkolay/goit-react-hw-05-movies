@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import { FilmCard, Img, MovieList, MovieTitle } from './ListFilms.styled';
 
-import images from '../../images/images.jpg';
+import images from '../../images/noPicture.png';
 import { routes } from 'routes';
 
 export default function ListFilms({ films }) {

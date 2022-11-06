@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { fetchFilmsCast } from '../../api/movieApi';
 import Loader from '../../components/Loader/Loader';
 import toast, { Toaster } from 'react-hot-toast';
-import images from '../../images/images.jpg';
+import images from '../../images/noPicture.png';
 import {
   AddInfo,
   Img,

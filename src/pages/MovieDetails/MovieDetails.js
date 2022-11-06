@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { useMovieDetails } from 'hooks';
 import Loader from '../../components/Loader/Loader';
 import BackLink from 'components/BackLink/BackLink';
-import images from '../../images/images.jpg';
+import images from '../../images/noPicture.png';
 import {
   AddTitle,
   FilmCard,
