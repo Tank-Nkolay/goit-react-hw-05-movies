@@ -5,6 +5,7 @@ export const Container = styled.div``;
 
 export const Header = styled.div`
   background-color: #9bb9f4;
+
   padding-top: 24px;
   padding-bottom: 24px;
 `;

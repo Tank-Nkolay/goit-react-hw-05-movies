@@ -1,15 +1,19 @@
-import { FallingLines } from 'react-loader-spinner';
-import { LoaderWrapper } from './Loader.styled';
+import { ThreeDots } from 'react-loader-spinner';
+import { Container } from './Loader.styled';
 
 export default function Loader() {
   return (
-    <LoaderWrapper>
-      <FallingLines
-        color="red"
-        width="100"
+    <Container>
+      <ThreeDots
+        height="200"
+        width="200"
+        radius="9"
+        color="#386bd1"
+        ariaLabel="three-dots-loading"
+        wrapperStyle={{}}
+        wrapperClassName=""
         visible={true}
-        ariaLabel="falling-lines-loading"
       />
-    </LoaderWrapper>
+    </Container>
   );
 }
