@@ -2,7 +2,7 @@
   "name": "goit-react-hw-05-movies",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Tank-Nkolay.github.io/goit-react-hw-05-movies/",
+  "homepage": "https://tank-nkolay.github.io/goit-react-hw-05-movies/",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@emotion/react": "^11.10.5",
