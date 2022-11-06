@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Suspense } from 'react';
 import { useState, useEffect } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
-import { fetchFilmsReview } from '../../api/movieDatabaseApi';
+import { fetchFilmsReview } from '../../api/movieApi';
 import Loader from '../../components/Loader/Loader';
 import toast, { Toaster } from 'react-hot-toast';
 import {

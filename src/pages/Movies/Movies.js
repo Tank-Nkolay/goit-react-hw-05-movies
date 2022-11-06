@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import Loader from 'components/Loader';
-import { fetchSearchFilms } from 'api/movieDatabaseApi';
+import { fetchSearchFilms } from '../../api/movieApi';
 import ListFilms from 'components/ListFilms/ListFilms';
 
 export default function Movies() {
