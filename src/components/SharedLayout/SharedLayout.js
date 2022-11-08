@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { routes } from 'routes';
 import Loader from 'components/Loader';
+import Logo from '../../images/logo-film.png';
 import {
   Container,
   Header,
@@ -15,6 +16,10 @@ export default function SharedLayout() {
     <Container>
       <Header>
         <Navigation>
+          <div to="/">
+            <StyledLogo src={Logo} alt="logo" />
+            <span>Movie Time</span>
+          </div>
           <NavigationItem to={routes.HOME} end>
             HOME
           </NavigationItem>

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
-import { FilmCard, Img, MovieList, MovieTitle } from './ListFilms.styled';
+import { Ul, FilmCard, Img, MovieTitle } from './ListFilms.styled';
 
 import images from '../../images/noPicture.png';
 import { routes } from 'routes';
@@ -10,7 +10,7 @@ export default function ListFilms({ films }) {
   const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
   return (
-    <MovieList>
+    <Ul>
       {films &&
         films.map(({ poster_path, title, id }) => (
           <Link
@@ -29,7 +29,7 @@ export default function ListFilms({ films }) {
             </FilmCard>
           </Link>
         ))}
-    </MovieList>
+    </Ul>
   );
 }
 

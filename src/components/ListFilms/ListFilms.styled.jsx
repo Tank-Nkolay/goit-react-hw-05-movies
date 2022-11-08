@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const MovieList = styled.ul`
+export const Ul = styled.ul`
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
