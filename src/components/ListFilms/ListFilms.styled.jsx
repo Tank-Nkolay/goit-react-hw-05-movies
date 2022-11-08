@@ -29,7 +29,7 @@ export const FilmCard = styled.div`
   &:focus {
     box-shadow: 0px 4px 4px 0px #00000040;
     transition: 0.5s ease all;
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   @media screen and (min-width: 768px) {
@@ -50,7 +50,7 @@ export const MovieTitle = styled.h2`
   font-weight: 20px;
   line-height: 1.17;
   text-transform: uppercase;
-  color: #000000;
+  color: #0e0f69;
 
   @media screen and (min-width: 768px) {
     line-height: 1.3;

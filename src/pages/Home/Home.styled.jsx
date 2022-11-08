@@ -5,7 +5,8 @@ export const Title = styled.h1`
   padding-top: 10px;
   display: flex;
   justify-content: center;
-  font-size: 20px;
+  font-size: 36px;
+  color: #0e0f69;
   font-weight: 600;
   background-color: #f7f7f7;
 `;

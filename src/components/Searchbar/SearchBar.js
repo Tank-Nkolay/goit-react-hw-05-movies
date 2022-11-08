@@ -2,8 +2,13 @@ import PropTypes from 'prop-types';
 import { Suspense } from 'react';
 import React from 'react';
 import { Formik } from 'formik';
-import { AiOutlineSearch } from 'react-icons/ai';
-import { Search, FormEl, Input, BtnSearch } from './SearchBar.styled';
+import {
+  Search,
+  FormEl,
+  Input,
+  SearchFormButton,
+  InputBox,
+} from './SearchBar.styled';
 import { Outlet } from 'react-router-dom';
 import Loader from 'components/Loader';
 import { useSearchParams } from 'react-router-dom';
@@ -24,17 +29,18 @@ export default function SearchBar({ onSubmit }) {
       >
         {({ isSubmitting }) => (
           <FormEl>
-            <BtnSearch type="submit" disabled={isSubmitting}>
-              <AiOutlineSearch size={20} />
-            </BtnSearch>
-
-            <Input
-              name="query"
-              type="text"
-              autoComplete="off"
-              autoFocus
-              placeholder="Search movies"
-            />
+            <InputBox>
+              <Input
+                name="query"
+                type="text"
+                autoComplete="off"
+                autoFocus
+                placeholder="Search movies"
+              />
+              <SearchFormButton type="submit" disabled={isSubmitting}>
+                Search
+              </SearchFormButton>
+            </InputBox>
           </FormEl>
         )}
       </Formik>

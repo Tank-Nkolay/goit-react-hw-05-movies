@@ -16,33 +16,49 @@ export const FormEl = styled(Form)`
 `;
 
 export const Input = styled(Field)`
-  width: 100%;
-  height: 20px;
+  width: 400px;
+  height: 40px;
   outline: none;
-  color: black;
-
-  border: none;
+  font-size: 24px;
+  color: #0e0f69;
+  padding: 8px;
   border-radius: 4px;
-
-  background-color: lightskyblue;
-  border-bottom: 0.5px solid #f7f7f7;
+  background-color: #9bb9f4;
+  border: 2px solid #0e0f69;
 
   &::placeholder {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 24px;
     line-height: 1.4;
     display: flex;
     align-items: center;
 
-    color: black;
+    color: #0e0f69;
   }
 `;
 
-export const BtnSearch = styled.button`
-  background-color: transparent;
-  border: none;
+export const SearchFormButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #9bb9f4;
+  color: white;
+  font-size: 24px;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
+  outline: none;
+  border-radius: 4px;
+  border: 2px solid #0e0f69;
+  &:hover {
+    background-color: #0e0f69;
+  }
+`;
+
+export const InputBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 `;
