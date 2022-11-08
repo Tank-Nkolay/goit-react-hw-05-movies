@@ -8,11 +8,11 @@ export const Title = styled.h1`
   font-size: 36px;
   color: #0e0f69;
   font-weight: 600;
-  background-color: #f7f7f7;
+  background-color: #dae6f1;
 `;
 
 export const MainSection = styled.div`
-  background-color: #f7f7f7;
+  background-color: #dae6f1;
   padding-top: 20px;
   padding-bottom: 40px;
 `;
