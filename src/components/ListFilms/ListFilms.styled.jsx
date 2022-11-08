@@ -13,17 +13,15 @@ export const Ul = styled.ul`
   list-style: none;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
 `;
 
 export const FilmCard = styled.div`
-  width: 280px;
-  padding-bottom: 20px;
+  width: 300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px 0px #00000040;
+  box-shadow: rgb(0 0 0 / 16%) 4px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
 
   &:hover,
   &:focus {
@@ -31,32 +29,18 @@ export const FilmCard = styled.div`
     transition: 0.5s ease all;
     transform: scale(1.05);
   }
-
-  @media screen and (min-width: 768px) {
-    width: 336px;
-  }
-  @media screen and (min-width: 1280px) {
-    max-width: 395px;
-  }
 `;
 
 export const Img = styled.img`
   width: 100%;
-  border-radius: 5px;
-  margin-bottom: 8px;
+  border-radius: 4px;
 `;
 
 export const MovieTitle = styled.h2`
-  font-weight: 20px;
+  padding: 8px;
+  font-size: 20px;
   line-height: 1.17;
   text-transform: uppercase;
   color: #0e0f69;
-
-  @media screen and (min-width: 768px) {
-    line-height: 1.3;
-  }
-  @media screen and (min-width: 1280px) {
-    line-height: 1.2;
-    font-size: 20px;
-  }
+  height: 40px;
 `;
