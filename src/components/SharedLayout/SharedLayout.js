@@ -2,13 +2,17 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { routes } from 'routes';
 import Loader from 'components/Loader';
-import Logo from '../../images/logo-film.png';
+import Logo from '../../images/logoKino.png';
 import {
   Container,
   Header,
   Navigation,
+  StyledLogo,
   NavigationItem,
   Footer,
+  NavBox,
+  LogoBox,
+  LogoSpan,
 } from './SharedLayout.styled';
 
 export default function SharedLayout() {
@@ -16,14 +20,16 @@ export default function SharedLayout() {
     <Container>
       <Header>
         <Navigation>
-          <div to="/">
+          <LogoBox to="/">
             <StyledLogo src={Logo} alt="logo" />
-            <span>Movie Time</span>
-          </div>
-          <NavigationItem to={routes.HOME} end>
-            HOME
-          </NavigationItem>
-          <NavigationItem to={routes.MOVIES}>MOVIES</NavigationItem>
+            <LogoSpan>Pokemon FILM</LogoSpan>
+          </LogoBox>
+          <NavBox>
+            <NavigationItem to={routes.HOME} end>
+              HOME
+            </NavigationItem>
+            <NavigationItem to={routes.MOVIES}>MOVIES</NavigationItem>
+          </NavBox>
         </Navigation>
       </Header>
       <Suspense fallback={<Loader />}>

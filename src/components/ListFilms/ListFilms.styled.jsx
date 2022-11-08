@@ -18,7 +18,6 @@ export const Ul = styled.ul`
 
 export const FilmCard = styled.div`
   width: 280px;
-  // height: 438px;
   padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;

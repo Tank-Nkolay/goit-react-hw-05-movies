@@ -1,27 +1,60 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  width: 1000 px;
+`;
 
 export const Header = styled.div`
   background-color: #9bb9f4;
-
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 1000 px;
 `;
 
 export const Navigation = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 50px;
+  width: 1000 px;
+`;
+
+export const StyledLogo = styled.img`
+  width: 64px;
+`;
+
+export const LogoBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+export const LogoSpan = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 24px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  color: #0e0f69;
+`;
+
+export const NavBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 `;
 
 export const NavigationItem = styled(NavLink)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   color: white;
-
   &.active {
     color: #0e0f69;
   }
