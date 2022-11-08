@@ -1,8 +1,8 @@
-export default function NotFound() {
+export default function ErrorMessage() {
   return (
     <main style={{ textAlign: 'center' }}>
       <b style={{ fontSize: 64 }}>404</b>
-      <p>Sorry, we couldn't find that page :(</p>
+      <p>Something went wrong. Please, try again</p>
     </main>
   );
 }

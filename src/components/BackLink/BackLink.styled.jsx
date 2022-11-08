@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const StyledLinkBack = styled(Link)`
+export const LinkStyled = styled(Link)`
   display: inline-flex;
   align-items: center;
   gap: 4px;

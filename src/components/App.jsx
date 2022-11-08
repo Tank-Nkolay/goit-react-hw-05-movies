@@ -8,7 +8,7 @@ const SharedLayout = lazy(() => import('./SharedLayout/SharedLayout'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
 const Cast = lazy(() => import('../pages/Cast'));
 const Reviews = lazy(() => import('../pages/Reviews'));
-const NotFound = lazy(() => import('./NotFound/NotFound'));
+const ErrorMessage = lazy(() => import('./ErrorMessage/ErrorMessage'));
 
 export const App = () => {
   return (
@@ -21,7 +21,7 @@ export const App = () => {
             <Route path={routes.CAST} element={<Cast />} />
             <Route path={routes.REVIEWS} element={<Reviews />} />
           </Route>
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<ErrorMessage />} />
         </Route>
       </Routes>
     </div>

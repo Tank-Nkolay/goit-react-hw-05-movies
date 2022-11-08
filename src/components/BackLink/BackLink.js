@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import { FaArrowCircleLeft } from 'react-icons/fa';
-import { StyledLinkBack } from './BackLink.styled';
+import { LinkStyled } from './BackLink.styled';
 
 export default function BackLink({ to, children }) {
   return (
-    <StyledLinkBack to={to}>
+    <LinkStyled to={to}>
       <FaArrowCircleLeft size="36" color="#9bb9f4" />
       {children}
-    </StyledLinkBack>
+    </LinkStyled>
   );
 }
 
