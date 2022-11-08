@@ -5,7 +5,7 @@ import { LinkStyled } from './BackLink.styled';
 export default function BackLink({ to, children }) {
   return (
     <LinkStyled to={to}>
-      <FaArrowCircleLeft size="36" color="#9bb9f4" />
+      <FaArrowCircleLeft size="36" />
       {children}
     </LinkStyled>
   );

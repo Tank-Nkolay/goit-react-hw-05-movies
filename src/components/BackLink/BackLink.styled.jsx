@@ -11,8 +11,9 @@ export const LinkStyled = styled(Link)`
   font-weight: 500;
   text-transform: uppercase;
   margin-left: 24px;
+  color: #6a97f1;
 
   :hover {
-    color: red;
+    color: #0e0f69;
   }
 `;
