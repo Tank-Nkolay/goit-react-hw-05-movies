@@ -42,5 +42,5 @@ export const MovieTitle = styled.h2`
   line-height: 1.17;
   text-transform: uppercase;
   color: #0e0f69;
-  height: 40px;
+  min-height: 48px;
 `;
