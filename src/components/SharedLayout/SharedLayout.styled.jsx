@@ -6,6 +6,11 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 1000;
+  box-shadow: rgb(0 0 0 / 16%) 4px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
   background-color: #9bb9f4;
   padding-left: 32px;
   padding-right: 32px;
