@@ -17,5 +17,3 @@ export const LinkStyled = styled(Link)`
     color: #0e0f69;
   }
 `;
-// =====================
-// =====================
